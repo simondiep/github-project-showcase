@@ -1,0 +1,14 @@
+.RepoCard {
+  background-color: #dcdee2;
+  width: 70%;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.RepoCardInfo {
+  width: 50%;
+}
+
+.RepoCardImage {
+}
