@@ -9,8 +9,11 @@ const GITHUB_USERNAME = "simondiep";
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      repositories,
+      repositories: repositories.sort(
+        (a, b) => (a.updated_at > b.updated_at ? -1 : b.updated_at > a.updated_at ? 1 : 0),
+      ),
     };
   }
 

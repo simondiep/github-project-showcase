@@ -12,7 +12,8 @@ This leverages the npm module `gh-pages` to deploy to your repo, but under the g
 
 # Todo
 
-- Replace repo image with actual previews
-- sort by last updated
+- Replace repo image with actual previews by uploading then loading from their respective repos
+  - preview image naming convention
+  - display preview on each repo's readme
 - fetch from Github API
 - write instructions to use
