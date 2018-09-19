@@ -9,8 +9,12 @@ const RepoCard = ({ repo }) => {
   return (
     <table class="RepoCard" key={repo.id}>
       <tr>
+        <th colspan="3" className="RepoCardTitle">
+          {repo.name}
+        </th>
+      </tr>
+      <tr>
         <td class="RepoCardInfo">
-          <h2>{repo.name}</h2>
           <p>{repo.description}</p>
           {repo.homepage && (
             <div>
@@ -20,7 +24,7 @@ const RepoCard = ({ repo }) => {
           <a href={repo.svn_url}>Code</a>
         </td>
         <td class="RepoCardImage">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="DefaultRepoCardImage" alt="logo" />
         </td>
       </tr>
     </table>

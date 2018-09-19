@@ -1,14 +1,40 @@
 .RepoCard {
   background-color: #dcdee2;
-  width: 70%;
-  margin: auto;
+  width: 520px;
+  height: 212px;
   padding: 5px;
-  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .RepoCardInfo {
   width: 50%;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.RepoCardTitle {
+  background-color: gray;
+  color: white;
+  font-size: 28px;
+  height: 50px;
+  border-radius: 4px;
 }
 
 .RepoCardImage {
+}
+
+.DefaultRepoCardImage {
+  animation: DefaultRepoCardImageSpin infinite 20s linear;
+  height: 144px;
+}
+
+@keyframes DefaultRepoCardImageSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
