@@ -10,10 +10,14 @@ The goal of this project is to allow anyone to easily showcase their github proj
 
 This leverages the npm module `gh-pages` to deploy to your repo, but under the gh-pages branch.
 
+# How to display preview images
+
+For each of your repositories:
+
+- add an image called `preview.gif` at the top-most level
+- add a Github Topic called `preview`
+
 # Todo
 
-- Replace repo image with actual previews by uploading then loading from their respective repos
-  - preview image naming convention
-  - display preview on each repo's readme
 - fetch from Github API
 - write instructions to use
