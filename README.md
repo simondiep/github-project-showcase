@@ -1,23 +1,26 @@
 # github-project-showcase
 
-work-in-progress
+Easily showcase your github projects.
 
-The goal of this project is to allow anyone to easily showcase their github projects on a github pages site.
+## How to set up
 
-# To deploy to Github pages
+- Fork this project
+- Create a Github personal access token for this app
+  - https://github.com/settings/tokens
+  - select the scope `public_repo`
+- Create a new [webtask](https://webtask.io/make) using the template `github-repos-webtask.js`
+- Update `constants.js` with your own values
+- `npm i && npm start`
+
+## To deploy to Github pages
 
 `npm run deploy`
 
 This leverages the npm module `gh-pages` to deploy to your repo, but under the gh-pages branch.
 
-# How to display preview images
+## How to display preview images
 
 For each of your repositories:
 
 - add an image called `preview.gif` at the top-most level
 - add a Github Topic called `preview`
-
-# Todo
-
-- fetch from Github API
-- write instructions to use

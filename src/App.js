@@ -1,29 +1,24 @@
 import React, { Component } from "react";
 import "./App.css";
-// TODO Load this externally
-import repositories from "./repositories.json";
 import RepoCard from "./components/RepoCard";
-
-const GITHUB_USERNAME = "simondiep";
+import { GITHUB_USERNAME, REPOS_URL } from "./Constants";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      repositories: repositories.sort(
-        (a, b) => (a.updated_at > b.updated_at ? -1 : b.updated_at > a.updated_at ? 1 : 0),
-      ),
+      repositories: [],
     };
   }
 
   componentDidMount() {
     // Retrieve all repos for user
-    // fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
-    //   .then(response => response.json())
-    //   .then(responseAsJson => {
-    //     this.setState({ repositories: responseAsJson });
-    //   });
+    fetch(REPOS_URL)
+      .then(response => response.json())
+      .then(responseAsJson => {
+        this.setState({ repositories: responseAsJson.repos });
+      });
   }
 
   render() {
