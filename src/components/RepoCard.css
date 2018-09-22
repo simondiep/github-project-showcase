@@ -3,7 +3,7 @@
   width: 502px;
   height: 288px;
   padding: 5px;
-  border-radius: 4px;
+  border-radius: 14px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -38,14 +38,15 @@
   padding: 2px;
   margin: 2px;
   display: inline-block;
-  color: black;
+  color: white;
+  fill: white;
   mix-blend-mode: difference;
   text-decoration: none;
 }
 
 .RepoLink:hover {
-  color: white;
-  fill: white;
+  color: black;
+  fill: black;
 }
 
 .RepoUrls {
