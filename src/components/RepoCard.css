@@ -34,13 +34,26 @@
 .RepoLink {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
-  padding: 5px;
+  border: solid 2px rgba(255, 255, 255, 0.6);
+  padding: 2px;
   margin: 2px;
   display: inline-block;
+  color: black;
+  mix-blend-mode: difference;
+  text-decoration: none;
+}
+
+.RepoLink:hover {
+  color: white;
+  fill: white;
 }
 
 .RepoUrls {
   text-align: left;
   vertical-align: bottom;
   font-size: 16px;
+}
+
+.GithubIcon {
+  vertical-align: bottom;
 }
