@@ -28,7 +28,7 @@ class RepoCard extends Component {
       <table className="RepoCard" key={repo.id} style={backgroundImageStyle}>
         <tr>
           <th colSpan="3" className="RepoCardTitle">
-            {repo.name}
+            <a href={repo.homepage ? repo.homepage : repo.svn_url}>{repo.name}</a>
           </th>
         </tr>
         <tr>
@@ -39,11 +39,6 @@ class RepoCard extends Component {
         </tr>
         <tr>
           <td className="RepoUrls">
-            {repo.homepage && (
-              <a className="RepoLink" href={repo.homepage}>
-                Demo
-              </a>
-            )}
             <a className="RepoLink" href={repo.svn_url}>
               <GithubIcon />
             </a>
