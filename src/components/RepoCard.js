@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { GITHUB_USERNAME } from "../Constants";
 import defaultPreview from "./default_preview.gif";
 import "./RepoCard.css";
 
@@ -17,7 +18,7 @@ class RepoCard extends Component {
     // Only try to retrieve preview images if specified in topic
     if (repo.topics.includes("preview")) {
       backgroundImageStyle = {
-        backgroundImage: `url(https://raw.githubusercontent.com/simondiep/${this.props.repo.name}/master/preview.gif)`,
+        backgroundImage: `url(https://raw.githubusercontent.com/${GITHUB_USERNAME}/${this.props.repo.name}/master/preview.gif)`,
       };
     } else {
       backgroundImageStyle = {
